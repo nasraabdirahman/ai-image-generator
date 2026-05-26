@@ -2,6 +2,7 @@ const button = document.getElementById("generateBtn");
 const promptInput = document.getElementById("prompt");
 const image = document.getElementById("image");
 const status = document.getElementById("status");
+const D_button = document.getElementById("downloadBtn");
 
 
 button.addEventListener("click", async () => {
@@ -44,4 +45,12 @@ button.addEventListener("click", async () => {
         console.log(error);
         status.textContent = error.message;
     }
+})
+
+D_button.addEventListener("click", () => {
+
+    const a = document.createElement("a");
+    a.href = image.src;
+    a.download = "ai-image.png";
+    a.click();
 })
