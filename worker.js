@@ -36,7 +36,7 @@ export default {
 
             return new Response(result, {
                 headers: {
-                    "Content-Type": "image/jpeg", 
+                    "Content-Type": "image/png", 
                     "Access-Control-Allow-Origin": "*"
                 },
             });
